@@ -1,0 +1,21 @@
+# Rust build artifacts
+/target
+**/target
+src-tauri/target/
+
+# Tauri build bundles (large binaries; build from source)
+src-tauri/target/release/bundle/
+
+# Node
+node_modules/
+
+# OS / editor noise
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# Local secrets / env
+.env
+*.key

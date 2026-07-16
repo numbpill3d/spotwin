@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SpotWin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- Winamp skin loader (hidden controls) -->
+    <div id="controls" style="position:fixed;right:4px;bottom:4px;z-index:9999;">
+      <button id="btn-skin-prev" title="Previous skin">&#9664;</button>
+      <button id="btn-skin" title="Load skin (next)">SKIN</button>
+      <button id="btn-skin-next" title="Next skin">&#9654;</button>
+      <button id="btn-prev" title="Previous">&#9198;</button>
+      <button id="btn-play" title="Play/Pause">&#9654;/&#10073;&#10073;</button>
+      <button id="btn-next" title="Next">&#9197;</button>
+      <button id="btn-ads" title="Check / re-apply Spotify ad-block (spicetify)">ADS</button>
+    </div>
+
+    <script src="vendor/webamp.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

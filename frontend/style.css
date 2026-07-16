@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* transparent so the Winamp skin floats with no OS chrome / black box */
+  background: transparent;
+  overflow: hidden;
+  font-family: "Tahoma", "Verdana", sans-serif;
+}
+
+/* Webamp renders the main + EQ + playlist windows into #app via absolute
+   positioning. Let #app grow to whatever Webamp lays out so the borderless
+   Tauri window can be resized to fit (see app.js auto-resize). */
+#app {
+  width: 275px;
+  height: 116px;
+}
+
+/* Webamp's own title bar is the drag handle for the whole widget.
+   cursor: move signals it; the actual drag is handled in app.js. */
+#app .title-bar,
+#app [class*="title-bar"] {
+  cursor: move;
+  -webkit-app-region: drag;
+  app-region: drag;
+}
+
+/* tiny control bar bottom-right so it doesn't fight the skin */
+#controls button {
+  background: #1a1a1a;
+  color: #0f0;
+  border: 1px solid #0f0;
+  font-size: 10px;
+  padding: 2px 5px;
+  margin-left: 2px;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+}
+#controls button:hover {
+  background: #0f0;
+  color: #000;
+}
